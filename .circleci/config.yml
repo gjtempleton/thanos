@@ -19,7 +19,7 @@ jobs:
           # require credentials. Env variables that sets up these tests will work only for these kind of PRs.
           command: |
             if ! [ -z ${GCP_PROJECT} ]; then
-              echo $GOOGLE_APPLICATION_CREDENTIALS_CONTENT > /go/src/github.com/improbable-eng/thanos/circleci-gcs-creds.json
+              echo $GOOGLE_APPLICATION_CREDENTIALS_CONTENT > /go/src/github.com/thanos-io/thanos/circleci-gcs-creds.json
               echo "Awesome! GCS integration tests are enabled."
             fi
       - run: make check-go-mod
